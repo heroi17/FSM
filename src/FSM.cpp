@@ -22,36 +22,13 @@ int generate(string name, int how_simbols) {
 	return 0;
 }
 
-string open_as_string(string name) {
-	ifstream in;
-	string str;
-	char c;
-	in.open(name);
-	if (in.is_open())
-	{
-		while (in.get(c)) {
-			str += c;
-		}
-	}
-	else cout << "Fail with open file: " << endl;
-	return str;
-}
+
 
 
 int main()
 {
-	//make file with simbols
-	string name = "test.txt";
-	int how_symbols = 10000;
-	//generate(name, how_symbols);
-	string string_data = open_as_string(name);
-	//cout << string_data;
-	if (IsStringIn(string_data, "My family is very important")) {
-		cout << "Substring is finded in text." << endl;
-	}
-	else {
-		cout << "Substring is not finded in this text." << endl;
-	}
+	menu my_menu = menu();
+	my_menu.start_menu_loop();
 
 
 	//FSM myFSM = FSM();

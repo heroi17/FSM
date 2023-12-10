@@ -3,6 +3,7 @@
 
 #pragma once
 #include "FSM_CLASS/FSM_CLASS.h"
+#include "CONSOLE_MENU/console_menu.h"
 #include "FIND_STRING/FIND_STRING.h"
 #include <iostream>
 #include <fstream>
