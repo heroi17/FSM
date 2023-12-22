@@ -6,7 +6,7 @@ you can write here whatewer you want
 but not in space where declarated something with dollar simbol
 
 $rule_state
-	$space h h
+	$empty h h
 	h o ho
 	ho u hou
 	hou s hous
