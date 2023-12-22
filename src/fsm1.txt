@@ -1,0 +1,20 @@
+--------fsm for finding substring "hause"----------
+
+$START
+
+you can write here whatewer you want
+but not in space where declarated something with dollar simbol
+
+$rule_state
+	$space h h
+	h o ho
+	ho u hou
+	hou s hous
+	hous e house
+$rule_end
+
+$break_state
+	house good
+$break_end
+
+$END

@@ -27,6 +27,7 @@ int generate(string name, int how_simbols) {
 
 int main()
 {
+	FSM<string, char> my_litle_pony = ReadFsmFromFile("fsm1.txt");
 	menu my_menu = menu();
 	my_menu.start_menu_loop();
 

@@ -7,6 +7,7 @@ bool IsStringIn(string text, string substring, string alphabet) {
 	FSM<string, char> Fsm_finder_string = generateAutomatStrIn(substring, alphabet);
 	string state = Fsm_finder_string.getState(vector<char>(text.begin(), text.end()));//optimisation is bad becouse i didn't think about the design
 	//Fsm_finder_string.print_rule();
+
 	return (state == substring);
 }
 

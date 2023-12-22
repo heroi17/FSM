@@ -4,6 +4,9 @@
 #include <string>
 #include <sstream>
 #include <map>
+#include <iostream>
+#include <fstream>
+#include "../FIND_STRING/FIND_STRING.h"
 using namespace std;
 class menu;
 
@@ -26,12 +29,17 @@ public:
 	state_start_menu();
 };
 
-class state_exit_menu : public state {
+class choice_menu: public state {
 public:
-	state_exit_menu() {
-		menu_information.push_back("asdas");
-	}
+	choice_menu();
 };
+
+class FSM_menu : public state {
+public:
+	FSM_menu();
+};
+
+
 
 
 
@@ -72,7 +80,7 @@ public:
 		else {cout << "your command is none solved." << endl; return void(); }
 	}
 	void start_menu_loop() {
-		current_state = new state_start_menu();
+		current_state = new choice_menu();
 		going_loop = true;
 		string input;
 		
@@ -90,7 +98,6 @@ public:
 				}
 			}
 			solve_command(input_command);
-			cout << "---------------------------------------------------------------" << endl;
 
 		}
 	}

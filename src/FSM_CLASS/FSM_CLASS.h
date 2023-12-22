@@ -1,6 +1,10 @@
 #pragma once
+#include <sstream>
+
 #include <iostream>
 #include <map>
+#include <string>
+#include <fstream>
 #include <vector>
 using namespace std;
 template<class state, class input>
@@ -28,6 +32,10 @@ public:
 				std::cout << "[" << k << "][" << k1 << "]: (" << v1 << ") " << std::endl;
 
 	}
+	string get_break_message(state current_state) {
+		if (break_state.find(current_state) == break_state.end()) return "it's not finite(break) state";
+		return break_state[current_state];
+	}
 private:
 	state base_state = "";
 	state current_state = "";
@@ -35,3 +43,7 @@ private:
 	map<state, string> break_state;
 
 };
+
+
+FSM<string, char> ReadFsmFromFile(string filename);
+vector<string> readasvec(string filename);
